@@ -1,0 +1,202 @@
+/**********************************
+GENERAL
+**********************************/
+
+body {
+  background: rgb(235,235,235);
+}
+
+header{
+  position: fixed;
+  display: block;
+  padding: 10px 50px;
+  top: 0px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  /*box-shadow: 0 20px 20px -12px rgba(0,0,0, .5);*/
+  font-family: helvetica, sans-serif;
+  background-color: #428bca;
+  font-size: 2em;
+  z-index: 10;
+}
+
+input {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 144px;
+
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 50px;
+}
+
+.btn-special {
+  margin: 0 2.5%;
+  width: 40%;
+  font-size: 2em;
+}
+
+.nav-link {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+/**********************************
+INDEX
+**********************************/
+.index {
+  margin-top: 150px;
+  border-radius: 25px;
+  background-color: rgb(235,235,235);
+}
+
+.buttons {
+  text-align: center;
+  margin: 15px;
+}
+
+
+/**********************************
+ Login and Sign Up
+**********************************/
+.padded {
+  margin-top: 130px;
+  margin-bottom: 50px;
+}
+
+.login {
+  background-color: white;
+}
+
+.signUp {
+  margin: 0px 30px 30px 30px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: rgb(235,235,235);
+  padding: 20px;
+}
+
+.signUp input{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.signUp label {
+  font-size: 2em;
+  margin: 5px;
+}
+
+/**********************************
+ Dashboard
+**********************************/
+
+.dashboard {
+  margin: 50px 0 0 0;
+}
+
+.dash-nav {
+  margin: 61px 0 0;
+  padding: 10px 50px;
+  width: 100%;
+  background-color: rgb(235,235,235);
+}
+
+.dash-top-left {
+  background-color: rgb(235,235,235);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 25px;
+}
+
+.dash-left-header {
+  font-size: 30px;
+}
+
+.dash-left-number {
+  margin: 0;
+  font-size: 120px;
+  color: steelblue;
+}
+
+.dash-left-sub {
+  font-size: 30px;
+}
+
+.dash-top {
+  margin-bottom: 50px;
+}
+
+.dash-chart {
+  background-color: rgb(235,235,235);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 25px;
+}
+
+/**********************************
+ Apply
+**********************************/
+.apply {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.apply input {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.apply-form {
+  background-color: rgb(235,235,235);
+  padding: 25px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+#date-input {
+  width: 35%;
+  text-align: left;
+}
+
+
+/**********************************
+ Job Chart
+**********************************/
+
+.interview-chart .axis path,
+.interview-chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.interview-chart .x.axis path {
+
+}
+
+.interview-chart .job-line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.interview-chart .response-line {
+  fill: none;
+  stroke: tomato;
+  stroke-width: 1.5px;
+}
+
+/**********************************
+ Float Clearfix
+**********************************/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

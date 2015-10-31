@@ -1,3 +1,4 @@
+// ---- require dependencies and set port variable
 var express    = require("express");
 var app        = express();
 var mongoose   = require("mongoose");
@@ -5,8 +6,12 @@ var morgan     = require("morgan");
 var passport   = require("passport");
 var ejs        = require("ejs");
 var bodyParser = require("body-parser");
-
 var port = process.env.PORT || 8080;
+
+// ---- serve up static files
+app.use('/js',express.static(__dirname + "/client/js/"));
+app.use('/css',express.static(__dirname + "/client/css/"));
+
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
