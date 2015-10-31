@@ -3,23 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>JobBud - Job Application Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js" charset="utf-8"></script>
+
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/main.css">   
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body ng-app="jobApp">
 
-    <div class="container index">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="title">JobBud</div>
-          <div class="subtitle">Job Application Dashboard</div>
-          <div class="row buttons">
-            <a class="btn btn-primary btn-lg btn-special" href="/login">Login</a>
-            <a class="btn btn-primary btn-lg btn-special" href="/signup">Sign Up</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div ui-view></div>
+    <script src="/js/script.min.js" charset="utf-8"></script>
   </body>
 </html>

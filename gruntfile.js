@@ -44,7 +44,7 @@ module.exports = function(grunt){
       },
       other: {
         files: ['**','!client/**/*.js'],
-        tasks: ['copy:client'],
+        tasks: ['copy:all'],
         options: {
           cwd: {files: 'src/'}
         }

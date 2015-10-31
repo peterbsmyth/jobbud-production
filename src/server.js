@@ -9,8 +9,7 @@ var bodyParser = require("body-parser");
 var port = process.env.PORT || 8080;
 
 // ---- serve up static files
-app.use('/js',express.static(__dirname + "/client/js/"));
-app.use('/css',express.static(__dirname + "/client/css/"));
+app.use(express.static(__dirname + "/client/"));
 
 
 app.use(morgan("dev"));
