@@ -23,6 +23,10 @@ app.get('/',function(req,res){
   res.render('index.ejs');
 });
 
+app.get('*',function(req,res){
+  res.render('index.ejs');
+});
+
 app.listen(port,function(){
   console.log("Running on port " + port);
 });
