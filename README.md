@@ -2,6 +2,12 @@
 Dashboard for JobSeekers
 
 # get started
-npm install
-grunt 
-node server
+Add database.js to src/server/config with  
+
+module.exports.db = {  
+  url: <MONGODB URI>  
+}
+
+npm install  
+grunt  
+node server  
