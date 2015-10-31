@@ -28,3 +28,6 @@ node_modules
 
 # Database Config
 src/server/config/database.js
+
+# Dev Folder
+dev
