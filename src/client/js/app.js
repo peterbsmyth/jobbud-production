@@ -22,6 +22,18 @@ var jobApp = angular.module('jobApp',['ui.router','ngResource','ngCookies'])
       controller: 'SignupCtrl'
     });
 
+    $stateProvider.state('seekerState', {
+      url: '/seeker',
+      templateUrl: '/views/templates/seeker.html',
+      controller: 'SeekerCtrl'
+    });
+
+    $stateProvider.state('adminState', {
+      url: '/admin',
+      templateUrl: '/views/templates/admin.html',
+      controller: 'AdminCtrl'
+    });
+
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false // problematic
