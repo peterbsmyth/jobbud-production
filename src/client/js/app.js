@@ -1,4 +1,4 @@
-var jobApp = angular.module('jobApp',['ui.router','ngResource'])
+var jobApp = angular.module('jobApp',['ui.router','ngResource','ngCookies'])
 
   .config(function($stateProvider,$urlRouterProvider,$locationProvider){
 
