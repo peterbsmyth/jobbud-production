@@ -6,13 +6,14 @@ var bcrypt   = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
     local            : {
         email     : String,
-        password     : String,
-        isAdmin      : Boolean,
+        password  : String,
+        isAdmin   : Boolean,
     },
     github           : {
 
     }
 });
+
 
 // ---- virtuals
 userSchema.virtual('userInfo')
@@ -21,7 +22,7 @@ userSchema.virtual('userInfo')
   });
 
 
-// ---- methods ----
+// ########## METHODS
 // ---- generating a hash
 userSchema.methods.generateHash = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
