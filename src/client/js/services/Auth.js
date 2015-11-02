@@ -29,6 +29,17 @@ jobApp.factory('Auth', ['$location','$rootScope','$cookies','User','Session',
         }, function(err) {
           return cb(err.data);
         });
+      },
+
+      logout: function(callback) {
+        var cb = callback || angular.noop;
+        Session.delete(function(res) {
+            $rootScope.currentUser = null;
+            return cb();
+          },
+          function(err) {
+            return cb(err.data);
+          });
       }
     };
   }
