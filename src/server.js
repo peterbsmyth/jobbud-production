@@ -1,13 +1,14 @@
 // ---- require dependencies and set port variable
-var express    = require("express");
-var app        = express();
-var mongoose   = require("mongoose");
-var morgan     = require("morgan");
-var passport   = require("passport");
-var ejs        = require("ejs");
-var bodyParser = require("body-parser");
-var session    = require('express-session');
-var db         = require('./server/config/database');
+var express       = require("express");
+var app           = express();
+var mongoose      = require("mongoose");
+var morgan        = require("morgan");
+var passport      = require("passport");
+var ejs           = require("ejs");
+var bodyParser    = require("body-parser");
+var coookieParser = require('cookie-parser');
+var session       = require('express-session');
+var db            = require('./server/config/database');
 
 var port = process.env.PORT || 8080;
 
@@ -19,9 +20,15 @@ app.use(express.static(__dirname + "/client/"));
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(coookieParser());
 app.use(session({
-  secret: "thisIsSuperDuperUBERsecret", resave: true, saveUninitialized: true
+  // name: 'user',
+  secret: "thisIsSuperDuperUBERsecret",
+  resave: false,
+  saveUninitialized: false,
+  maxAge: 3600000
 }));
+
 
 // ---- connect to dbs
 mongoose.connect(db.mongo.url);
