@@ -10,5 +10,6 @@ module.exports = function(app) {
 
   // process the login form
   app.post('/auth/session', ctrl.session.login);
+  app.delete('/auth/session', ctrl.session.logout);
 
 };

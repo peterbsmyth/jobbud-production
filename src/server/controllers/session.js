@@ -12,11 +12,13 @@ module.exports.login = function(req, res) {
     // if there's no user
     if (!user) {
       // respond with error
+      req.session.destroy();
       res.json({error: 'no user found!'});
     } else {
       //if password matches
       if (user.validPassword(req.body.password)) {
         // respond with user info
+        req.session.user = user.userInfo;
         res.json(user.userInfo);
       } else {
         // respond with error
@@ -25,4 +27,14 @@ module.exports.login = function(req, res) {
       }
     }
   });
+};
+
+module.exports.logout = function(req, res) {
+  console.log(req.session);
+  if (req.session.user){
+    req.session.destroy();
+    res.sendStatus(200);
+  } else{
+    res.sendStatus(400,'not logged in');
+  }
 };
