@@ -6,7 +6,6 @@ var morgan        = require("morgan");
 var passport      = require("passport");
 var ejs           = require("ejs");
 var bodyParser    = require("body-parser");
-var coookieParser = require('cookie-parser');
 var session       = require('express-session');
 var db            = require('./server/config/database');
 
@@ -20,13 +19,14 @@ app.use(express.static(__dirname + "/client/"));
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use(coookieParser());
 app.use(session({
-  // name: 'user',
-  secret: "thisIsSuperDuperUBERsecret",
+  name: 'session',
+  secret: "$T$Tdavdg#E#Eghdgjdg^%$#[]",
   resave: false,
   saveUninitialized: false,
-  maxAge: 3600000
+  cookie: {
+    maxAge: 3600000
+  }
 }));
 
 
