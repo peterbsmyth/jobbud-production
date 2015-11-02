@@ -1,5 +1,7 @@
-var users = require('./users');
+var users    = require('./users');
+var session = require('./session');
 
 module.exports = {
-  users: users
+  users: users,
+  session: session,
 };

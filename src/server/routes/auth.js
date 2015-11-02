@@ -1,20 +1,10 @@
-module.exports = function(app, passport) {
+var User = require('../models/user');
+var ctrl = require('../controllers/index');
 
-  // ---- process the login form
-  app.post('/login', passport.authenticate('local-login', {
-      successRedirect : '/dashboard',
-      failureRedirect : '/fail'
-  }));
+module.exports = function(app) {
 
   // ---- process the signup form
-  app.post('/signup', passport.authenticate('local-signup', {
-      successRedirect : '/dashboard',
-      failureRedirect : '/'
-  }));
+  app.post('/auth/users', ctrl.users.create);
+  app.post('/auth/session', ctrl.session.login);
 
-  // ---- logout
-  app.get('/logout', function(req, res) {
-      req.logout();
-      res.redirect('/');
-  });
 };
