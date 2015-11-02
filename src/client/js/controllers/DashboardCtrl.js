@@ -1,5 +1,5 @@
-jobApp.controller('DashboardCtrl',['$scope',
-  function($scope){
-  
+jobApp.controller('DashboardCtrl',['$scope','$rootScope',
+  function($scope,$rootScope){
+
   }
 ]);

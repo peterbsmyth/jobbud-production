@@ -12,7 +12,7 @@ jobApp.controller('LoginCtrl',['$scope','$location','Auth',
           $scope.errors = {};
 
           if (!err) {
-            $location.path('/admin');
+            $location.path('/dashboard');
           }
       });
     };
