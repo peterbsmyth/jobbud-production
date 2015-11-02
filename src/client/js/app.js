@@ -22,10 +22,10 @@ var jobApp = angular.module('jobApp',['ui.router','ngResource','ngCookies'])
       controller: 'SignupCtrl'
     });
 
-    $stateProvider.state('seekerState', {
-      url: '/seeker',
-      templateUrl: '/views/templates/seeker.html',
-      controller: 'SeekerCtrl'
+    $stateProvider.state('dashboardState', {
+      url: '/dashboard',
+      templateUrl: '/views/templates/dashboard.html',
+      controller: 'DashboardCtrl'
     });
 
     $stateProvider.state('adminState', {

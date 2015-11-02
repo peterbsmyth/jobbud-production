@@ -11,7 +11,7 @@ jobApp.controller('SignupCtrl',['$scope','$rootScope','$location','$resource','U
           $scope.errors = {};
 
           if(!err){
-            $location.path('/seeker');
+            $location.path('/dashboard');
           }
       });
     };
