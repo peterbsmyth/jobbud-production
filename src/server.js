@@ -40,9 +40,9 @@ app.set('view engine', 'ejs');
 
 
 // ---- configure passport
-require('./server/config/passport')(passport);
-app.use(passport.initialize());
-app.use(passport.session());
+// require('./server/config/passport')(passport);
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 
 // ---- serve entry routes
