@@ -6,6 +6,12 @@
       <div class="signUp">
         <form name="form" ng-submit="signup()">
             <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" ng-model="user.firstName" name="firstName">
+                <label>Last Name</label>
+                <input type="text" class="form-control" ng-model="user.lastName" name="lastName">
+            </div>
+            <div class="form-group">
                 <label>E-Mail</label>
                 <input type="text" class="form-control" ng-model="user.email" name="email">
             </div>

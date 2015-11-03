@@ -4,6 +4,8 @@ jobApp.controller('SignupCtrl',['$scope','$rootScope','$location','$resource','U
     $scope.signup = function(){
 
       Auth.createUser({
+        firstName: $scope.user.firstName,
+        lastName: $scope.user.lastName,
         email: $scope.user.email,
         password: $scope.user.password
       },

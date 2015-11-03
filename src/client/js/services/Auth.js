@@ -2,7 +2,6 @@ jobApp.factory('Auth', ['$location','$rootScope','$cookies','User','Session',
   function($location,$rootScope,$cookies,User,Session){
     $rootScope.currentUser = $cookies.get('session') || null;
     $cookies.remove('session');
-    console.log('session:' + $rootScope.currentUser);
 
     return {
 
