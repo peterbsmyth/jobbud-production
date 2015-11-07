@@ -19,6 +19,14 @@ var userSchema = mongoose.Schema({
     }
 });
 
+// ---- validator
+UserSchema.path('local.email').validate(function(value, respond) {
+  mongoose.models.User.findOne({'local.email': value}, function(err, user) {
+    if(err) throw err;
+    if(user) return respond(false);
+    respond(true);
+  });
+}, 'The specified email address is already in use.');
 
 // ---- virtuals
 userSchema.virtual('userInfo')

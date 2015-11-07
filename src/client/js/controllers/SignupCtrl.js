@@ -1,7 +1,7 @@
 jobApp.controller('SignupCtrl',['$scope','$rootScope','$location','$resource','User','Auth',
   function($scope,$rootScope,$location,$resource,User,Auth){
 
-    $scope.signup = function(){
+    $scope.signup = function(form){
 
       Auth.createUser({
         firstName: $scope.user.firstName,
@@ -14,6 +14,12 @@ jobApp.controller('SignupCtrl',['$scope','$rootScope','$location','$resource','U
 
           if(!err){
             $location.path('/dashboard');
+          } else {
+            console.log(err);
+            angular.forEach(err.errors, function(error,field){
+              form[field].$setValidity('mongoose',false);
+              $scope.errors[field] = error.type;
+            });
           }
       });
     };
